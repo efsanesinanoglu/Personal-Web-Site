@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>İletişim Sonucu</title>
+</head>
+<body>
+    <header>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="center">
+                <h2>Gönderilen Bilgiler</h2>
+                <div class="result-container">
+                    <p><strong>İsim:</strong> <span id="name"></span></p>
+                    <p><strong>E-mail:</strong> <span id="email"></span></p>
+                    <p><strong>Telefon:</strong> <span id="telefon"></span></p>
+                    <p><strong>Dil:</strong> <span id="dil"></span></p>
+                    <p><strong>Cinsiyet:</strong> <span id="cinsiyet"></span></p>
+                    <p><strong>CV ve Fotoğraf:</strong> <span id="cv"></span></p>
+                    <p><strong>Şehir:</strong> <span id="sehir"></span></p>
+                    <p><strong>Üniversite:</strong> <span id="universite"></span></p>
+                    <p><strong>Mesaj:</strong> <span id="mesaj"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Efsane Sinanoğlu &copy; 2023</p>
+    </footer>
+    <script>
+        var queryString = window.location.search.substring(1);
+        var params = new URLSearchParams(queryString);
+
+        document.getElementById("name").textContent = params.get("name");
+        document.getElementById("email").textContent = params.get("email");
+        document.getElementById("telefon").textContent = params.get("telefon");
+        document.getElementById("dil").textContent = params.get("dil");
+        document.getElementById("cinsiyet").textContent = params.get("Cinsiyet");
+        document.getElementById("cv").textContent = params.get("file");
+        document.getElementById("sehir").textContent = params.get("Şehir");
+        document.getElementById("universite").textContent = params.get("universite");
+        document.getElementById("mesaj").textContent = params.get("mesaj");
+    </script>
+</body>
+</html>
